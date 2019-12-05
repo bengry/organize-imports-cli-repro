@@ -1,4 +1,13 @@
 import React from "react";
+import {
+  someVeryLongName,
+  someVeryLongName2,
+  someVeryLongName3
+} from "./some-module/foo";
+
+console.log(someVeryLongName);
+console.log(someVeryLongName2);
+console.log(someVeryLongName3);
 
 const App: React.FC = () => {
   return (
