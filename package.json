@@ -13,7 +13,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
-    "typescript": "~3.7.2"
+    "typescript": "~3.7.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,6 +34,28 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "husky": ">=3.1.0",
+    "lint-staged": ">=9.5.0",
+    "organize-imports-cli": "^0.7.0",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx,js}": [
+      "organize-imports-cli",
+      "prettier --write",
+      "git add"
     ]
   }
 }
