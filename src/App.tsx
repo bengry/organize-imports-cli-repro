@@ -1,8 +1,8 @@
 import React from "react";
 import {
   someVeryLongName,
-  someVeryLongName2,
-  someVeryLongName3
+  someVeryLongName3,
+  someVeryLongName2
 } from "./some-module/foo";
 
 console.log(someVeryLongName);
